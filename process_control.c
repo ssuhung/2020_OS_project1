@@ -87,6 +87,7 @@ pid_t proc_create(Process chld){
 	printf("len of dmesg: %d\n", (int)strlen(dmesg));
 #endif
         syscall(SYS_PRINT_STR, dmesg, strlen(dmesg)+1);
+        print("%s", dmesg);
 
         exit(0);
     }
